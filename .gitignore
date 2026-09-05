@@ -1,0 +1,50 @@
+# ==============================================================================
+# Munder Difflin Workspace - Git Ignore Configuration
+# ==============================================================================
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Local Instance Config & Backups (generated from roster.template.json)
+roster.json
+roster-backups/
+
+# Hive Internal Git & IPC Sockets
+hive/.git/
+hive/*.sock
+hive/hooks.sock
+
+# Hive Runtime Ledgers & Live Feeds (Auto-generated/updated at runtime)
+hive/fleet.json
+hive/registry.json
+hive/log.jsonl
+hive/cost-ledger.jsonl
+
+# Ephemeral Spawn Requests (Only track directory via .gitkeep)
+hive/spawn-requests/*
+!hive/spawn-requests/.gitkeep
+
+# Live Task Board & Kanban (Local per instance so different machines can do different tasks)
+hive/tasks.json
+hive/board.md
+
+# Agent Runtime Message Queues & Session Data
+hive/agents/*/inbox/*
+!hive/agents/*/inbox/.gitkeep
+!hive/agents/*/inbox/.done/
+hive/agents/*/inbox/.done/*
+!hive/agents/*/inbox/.done/.gitkeep
+hive/agents/*/outbox/*
+!hive/agents/*/outbox/.gitkeep
+hive/agents/*/cursor.json
+hive/agents/*/settings.json
+hive/agents/*/.claude/
+hive/agents/*/.codex/
+
+# Agent Dynamic Memory (Local per instance so memories don't collide across tasks)
+hive/agents/*/memory.md

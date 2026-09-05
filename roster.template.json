@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "savedAt": "2026-09-06T00:00:00.000Z",
+  "agents": [
+    {
+      "id": "god",
+      "name": "Moo Cow",
+      "character": "michael",
+      "accent": "lemon",
+      "description": "god — runs the floor, triages requests, escalates only critical calls to you",
+      "project": "hive",
+      "tmuxTarget": "",
+      "cwd": "{{HARNESS_HOME}}",
+      "status": "idle",
+      "action": "",
+      "progress": 0,
+      "currentStation": "desk",
+      "ptyId": "",
+      "command": "codex --model gpt-5-codex -a never -s workspace-write",
+      "provider": "codex",
+      "model": "gpt-5-codex",
+      "isGod": true,
+      "terminalGeneration": 0
+    }
+  ],
+  "archived": [],
+  "restorable": [],
+  "queues": {},
+  "selectedId": "god"
+}
