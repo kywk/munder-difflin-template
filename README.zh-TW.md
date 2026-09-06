@@ -16,12 +16,18 @@ Munder Difflin 在運行時，會在工作目錄中產生大量的**本機即時
   * Agent 團隊名冊範本 (`roster.template.json`)
   * Agent 人設與核心 Prompt (`hive/agents/<id>/identity.md`)
   * 通訊 Hook 與代理腳本 (`hive/bin/`)
-  * 協作規範與指令集 (`hive/PROTOCOL.md`, `hive/COMMANDS.md`)
+  * 協作規範、SDLC 路由與指令集 (`hive/PROTOCOL.md`, `hive/SDLC.md`, `hive/COMMANDS.md`)
 * **本機執行期（.gitignore 隔離，本機各自獨立）**：
   * 當前本機狀態與終端行程識別碼 (`roster.json`, `hive/fleet.json`, `hive/registry.json`)
   * 任務看板與即時計畫 (`hive/tasks.json`, `hive/board.md`)
   * 訊息佇列與長期學習記憶 (`hive/agents/*/inbox/`, `outbox/`, `memory.md`)
   * 通訊 Socket (`hive/hooks.sock`) 與 Harness 內部 Git (`hive/.git/`)
+
+---
+
+## 常駐 Agent 團隊
+
+`Moo Cow` 是使用者代理與 GOD 總控；日常派發交由 Delivery PM。常駐名冊另含資深架構、架構、後端、前端、QA、獨立審查、DevOps、日常作業，以及文件／報告／投影片角色。版本庫內的 command 使用 Codex 且不鎖定模型，採用者可依自己的訂閱調整 provider 與 model。能力路由、備援、動態專家、人工閘門與完成條件以 `hive/SDLC.md` 為準。
 
 ---
 
@@ -40,6 +46,7 @@ munder-difflin-template/
 ├── init.sh                  # 新電腦初次環境初始化腳本
 └── hive/
     ├── PROTOCOL.md          # Hive 代理人協同協議
+    ├── SDLC.md              # 角色路由、交付流程、升級與人工閘門
     ├── COMMANDS.md          # 支援的指令集說明文件
     ├── board.template.md    # 初始共用計畫看板範本
     ├── tasks.template.json  # 初始任務看板範本

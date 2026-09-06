@@ -1,5 +1,7 @@
 # Hive protocol
 
+For SDLC ownership, model routing, specialist escalation, delivery gates, and handoff evidence, read `SDLC.md` before accepting or assigning implementation work. This file remains authoritative for Hive transport and runtime mechanics.
+
 You are one of several Claude agents sharing this hive. Coordination is entirely
 file-based; the harness (main process) is the only thing that runs git and the
 only thing that moves messages between agents.
