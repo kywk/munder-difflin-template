@@ -16,12 +16,18 @@ To allow you to **use the exact same Agent Team roster across multiple computers
   * Agent team roster template (`roster.template.json`)
   * Agent personas and core system prompts (`hive/agents/<id>/identity.md`)
   * Communication hooks and proxy scripts (`hive/bin/`)
-  * Collaboration protocol and CLI command reference (`hive/PROTOCOL.md`, `hive/COMMANDS.md`)
+  * Collaboration protocol, SDLC routing, and CLI reference (`hive/PROTOCOL.md`, `hive/SDLC.md`, `hive/COMMANDS.md`)
 * **Local Runtime (Gitignored & Isolated per machine)**:
   * Current local state and terminal process IDs (`roster.json`, `hive/fleet.json`, `hive/registry.json`)
   * Task boards and active execution plans (`hive/tasks.json`, `hive/board.md`)
   * Message queues and long-term learned memories (`hive/agents/*/inbox/`, `outbox/`, `memory.md`)
   * Communication socket (`hive/hooks.sock`) and harness internal Git history (`hive/.git/`)
+
+---
+
+## Permanent Agent Team
+
+`Moo Cow` is the owner's proxy and GOD controller; routine dispatch belongs to the Delivery PM. The permanent roster also provides senior architecture, architecture, backend, frontend, QA, independent review, DevOps, operations, and document/report/presentation roles. The checked-in commands use Codex without pinning a model so adopters can select providers and models available to their own subscriptions. `hive/SDLC.md` is authoritative for capability routing, fallbacks, on-demand specialists, human gates, and completion criteria.
 
 ---
 
@@ -40,6 +46,7 @@ munder-difflin-template/
 ├── init.sh                  # First-time machine environment initialization script
 └── hive/
     ├── PROTOCOL.md          # Hive agent collaboration protocol
+    ├── SDLC.md              # Role routing, delivery flow, escalation, and human gates
     ├── COMMANDS.md          # Supported command reference
     ├── board.template.md    # Initial shared plan board template
     ├── tasks.template.json  # Initial task board template
